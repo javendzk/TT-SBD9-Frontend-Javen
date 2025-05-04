@@ -176,6 +176,9 @@ const RegisterPage = () => {
                           placeholder="••••••••"
                         />
                       </div>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Password minimum 8 char, 1 num, dan 1 special char
+                      </p>
                     </div>
                     
                     <div>
