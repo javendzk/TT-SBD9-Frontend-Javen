@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../utils/endpoints';
 import { saveUser } from '../utils/authentication';
 import NavigationBar from '../components/navigationBar';
+import authImage from '../assets/auth_klinikjaven.png';
 
 const LoginPage = () => {
   useEffect(() => {
@@ -58,7 +59,7 @@ const LoginPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0077b6] to-[#48cae4] opacity-95"></div>
                 <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-12">
                 <img 
-                    src="/src/assets/auth_klinikjaven.png" 
+                    src={authImage} 
                     alt="Klinik Javen Auth"
                     className="w-full h-auto rounded-lg"
                     onError={(e) => {
