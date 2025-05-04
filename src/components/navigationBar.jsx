@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { isLoggedIn, getUser, removeUser } from '../utils/authentication';
+import logoKlinikJaven from '../assets/logo_klinikjaven.png';
+import logoKlinikJavenInverse from '../assets/logo_klinikjaven_inverse.png';
 
 const NavigationBar = ({ isTransparent = false }) => {
   const [user, setUser] = useState(null);
@@ -47,8 +49,8 @@ const NavigationBar = ({ isTransparent = false }) => {
     : "bg-[#0077b6] text-white hover:bg-blue-800";
 
   const logoSrc = isTransparent && !scrolled 
-    ? "/src/assets/logo_klinikjaven_inverse.png"  
-    : "/src/assets/logo_klinikjaven.png";         
+    ? logoKlinikJavenInverse  
+    : logoKlinikJaven;         
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navbarBgClasses()}`}>
